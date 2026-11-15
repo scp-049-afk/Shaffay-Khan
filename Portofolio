@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaffay Khan — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0a0a0a',
+            paper: '#fafafa',
+            mist: '#e5e5e5',
+            steel: '#737373',
+            slate: '#404040',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    ::selection { background: #0a0a0a; color: #fafafa; }
+    body { -webkit-font-smoothing: antialiased; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .grain::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink font-sans grain min-h-screen">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-paper/80 border-b border-mist">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-mono text-sm font-medium tracking-tight">SK<span class="text-steel">/</span></a>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#about" class="text-steel hover:text-ink transition">About</a>
+        <a href="#links" class="text-steel hover:text-ink transition">Links</a>
+        <a href="#support" class="text-steel hover:text-ink transition">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="min-h-screen flex items-center px-6 pt-16">
+    <div class="max-w-5xl mx-auto w-full">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-steel mb-6 fade-up">Portfolio — 2026</p>
+      <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] mb-8 fade-up">
+        Shaffay<br /><span class="text-steel">Khan.</span>
+      </h1>
+      <div class="max-w-xl space-y-4 fade-up">
+        <p class="text-lg sm:text-xl text-slate leading-relaxed">
+          16-year-old pursuing <span class="font-semibold text-ink">Cybersecurity Engineering</span>, currently building freelance skills to make some money.
+        </p>
+        <p class="text-base text-steel">
+          Video editing, AI-assisted work, and whatever pays the bills — one project at a time.
+        </p>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-3 fade-up">
+        <a href="#links" class="px-6 py-3 bg-ink text-paper text-sm font-medium rounded-full hover:bg-slate transition">Find me online</a>
+        <a href="#support" class="px-6 py-3 border border-ink text-ink text-sm font-medium rounded-full hover:bg-ink hover:text-paper transition">Buy me a coffee</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="px-6 py-24 border-t border-mist">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <h2 class="font-mono text-xs uppercase tracking-[0.3em] text-steel fade-up">01 — About</h2>
+      </div>
+      <div class="md:col-span-8 space-y-6 fade-up">
+        <p class="text-2xl sm:text-3xl font-semibold tracking-tight leading-snug">
+          I'm 16, based in Pakistan, and I'm teaching myself the skills that matter.
+        </p>
+        <p class="text-base text-slate leading-relaxed">
+          Cybersecurity engineering is the long game. Right now, I'm building freelance skills — video editing on Linux, AI-assisted content, and anything that lets me earn in cryptocurrency without a traditional bank account. No phone number, no bank, just a wallet and a work ethic.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+          <div class="border border-mist rounded-lg p-4">
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Focus</p>
+            <p class="text-sm font-medium">Cybersecurity</p>
+          </div>
+          <div class="border border-mist rounded-lg p-4">
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Age</p>
+            <p class="text-sm font-medium">16</p>
+          </div>
+          <div class="border border-mist rounded-lg p-4">
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Status</p>
+            <p class="text-sm font-medium">Open to work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section id="links" class="px-6 py-24 border-t border-mist">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-12 gap-10 mb-12">
+        <div class="md:col-span-4">
+          <h2 class="font-mono text-xs uppercase tracking-[0.3em] text-steel fade-up">02 — Links</h2>
+        </div>
+        <div class="md:col-span-8 fade-up">
+          <p class="text-2xl sm:text-3xl font-semibold tracking-tight">Find me online.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 fade-up">
+        <!-- Instagram -->
+        <a href="https://instagram.com/YOUR_INSTA" target="_blank" rel="noopener"
+           class="group border border-mist rounded-xl p-6 flex items-center justify-between hover:border-ink transition">
+          <div>
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Instagram</p>
+            <p class="text-sm font-medium">@YOUR_INSTA</p>
+          </div>
+          <span class="text-steel group-hover:text-ink group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener"
+           class="group border border-mist rounded-xl p-6 flex items-center justify-between hover:border-ink transition">
+          <div>
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">GitHub</p>
+            <p class="text-sm font-medium">@YOUR_GITHUB</p>
+          </div>
+          <span class="text-steel group-hover:text-ink group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+        <!-- Discord -->
+        <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" rel="noopener"
+           class="group border border-mist rounded-xl p-6 flex items-center justify-between hover:border-ink transition">
+          <div>
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Discord</p>
+            <p class="text-sm font-medium">YOUR_DISCORD#0000</p>
+          </div>
+          <span class="text-steel group-hover:text-ink group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+        <!-- Telegram -->
+        <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener"
+           class="group border border-mist rounded-xl p-6 flex items-center justify-between hover:border-ink transition">
+          <div>
+            <p class="font-mono text-xs text-steel uppercase tracking-wider mb-1">Telegram</p>
+            <p class="text-sm font-medium">@YOUR_TELEGRAM</p>
+          </div>
+          <span class="text-steel group-hover:text-ink group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support / Buy me a coffee -->
+  <section id="support" class="px-6 py-24 border-t border-mist">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-12 gap-10 mb-12">
+        <div class="md:col-span-4">
+          <h2 class="font-mono text-xs uppercase tracking-[0.3em] text-steel fade-up">03 — Support</h2>
+        </div>
+        <div class="md:col-span-8 fade-up">
+          <p class="text-2xl sm:text-3xl font-semibold tracking-tight">Buy me a coffee.</p>
+          <p class="text-base text-steel mt-3">Crypto only — no banks, no middlemen. Copy the address below and send whatever you feel like.</p>
+        </div>
+      </div>
+
+      <div class="fade-up border border-ink rounded-2xl p-8 sm:p-10 bg-ink text-paper">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-paper text-ink flex items-center justify-center text-xl font-bold">☕</div>
+            <div>
+              <p class="font-mono text-xs uppercase tracking-wider text-mist/60 mb-1">Wallet Address (USDT / USDC — BSC)</p>
+              <p id="wallet" class="font-mono text-sm sm:text-base break-all text-paper">0xYOUR_WALLET_ADDRESS_HERE</p>
+            </div>
+          </div>
+          <button id="copyBtn"
+                  class="shrink-0 px-6 py-3 bg-paper text-ink text-sm font-medium rounded-full hover:bg-mist transition">
+            Copy address
+          </button>
+        </div>
+        <p class="font-mono text-xs text-mist/40 mt-6">Network: BSC (BEP-20). Double-check before sending.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 py-12 border-t border-mist">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="font-mono text-xs text-steel">© 2026 Shaffay Khan. Built with Tailwind + vanilla JS.</p>
+      <a href="#top" class="font-mono text-xs text-steel hover:text-ink transition">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+    // Copy wallet address
+    const copyBtn = document.getElementById('copyBtn');
+    const walletEl = document.getElementById('wallet');
+    copyBtn.addEventListener('click', async () => {
+      const address = walletEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(address);
+        copyBtn.textContent = 'Copied ✓';
+        copyBtn.classList.add('bg-mist');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy address';
+          copyBtn.classList.remove('bg-mist');
+        }, 2000);
+      } catch (err) {
+        // Fallback for older browsers
+        const range = document.createRange();
+        range.selectNodeContents(walletEl);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        document.execCommand('copy');
+        copyBtn.textContent = 'Copied ✓';
+        setTimeout(() => { copyBtn.textContent = 'Copy address'; }, 2000);
+      }
+    });
+  </script>
+</body>
+</html>
